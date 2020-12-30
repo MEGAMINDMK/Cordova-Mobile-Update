@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="io.cordova.hellocordova" version="1.1.3" xmlns="https://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>App Update Demo</name>
+<description>Webnet Official Tasbeeh Counter</description>
+<author email="muhommadraahim1@gmail.com" href="https://web-net.ml">M Raahim Khattak</author>
+<preference name="stay-in-webview" value="true" />
+<preference name="orientation" value="default" />
+<preference name="target-device" value="universal" />
+<preference name="DisallowOverscroll" value="true" />
+<preference name="OverrideUserAgent" value="Mozilla/5.0 (Linux; Android 10; SM-A207F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.117 Mobile Safari/537.36 EdgA/45.11.4.5118" />
+<content src="index.html" />
+<plugin name="cordova-plugin-inappbrowser-location-editable" source="npm" spec="*" />
+<plugin name="cordova-plugin-whitelist" source="npm" spec="*" />
+<plugin name="cordova-plugin-themeablebrowser" source="npm" spec="*" />
+<plugin name="cordova-plugin-geolocation" source="npm" spec="*" />
+<plugin name="cordova-plugin-android-permissions" source="npm" spec="*" />
+<plugin name="cordova-plugin-app-update" source="npm" spec="*" />
+<plugin name="cordova-plugin-appversion" source="npm" spec="*" />
+<icon src="www/img/imageedit_4_8549818642.png" />
+<access origin="*" browserOnly="true" subdomains="true" />
+<allow-navigation href="*"/>
+<allow-intent href="http://*/*" />
+<allow-intent href="https://*/*" />
+<allow-intent href="tel:*" />
+<allow-intent href="sms:*" />
+<allow-intent href="mailto:*" />
+<allow-intent href="geo:*" />
+<allow-intent href="market:*" />
+<platform name="android">
+<edit-config xmlns:android="http://schemas.android.com/apk/res/android" file="app/src/main/AndroidManifest.xml" mode="merge" target="/manifest/application">
+<application android:networkSecurityConfig="@xml/network_security_config" />
+</edit-config>
+<resource-file src="network_security_config.xml" target="app/src/main/res/xml/network_security_config.xml" />
+</platform>  
+</widget>
+
