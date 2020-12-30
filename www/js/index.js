@@ -15,7 +15,7 @@ function addCheckAppUpdateInfo() {
 }
 
 function checkAppUpdate() {
-   var updateUrl = "https://webnetappupdater.netlify.app/version.xml";
+   var updateUrl = "https://url.com/version.xml";
     window.AppUpdate.checkAppUpdate(onSuccess, onFail, updateUrl);
     function onFail() {console.log('fail', JSON.stringify(arguments), arguments);}
     function onSuccess() {
